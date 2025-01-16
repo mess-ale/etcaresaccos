@@ -1,0 +1,17 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  modules: [ '@pinia/nuxt', "@nuxtjs/tailwindcss", '@nuxtjs/google-fonts'],
+  compatibilityDate: '2024-04-03',
+  googleFonts: {
+    families: {
+      Oswald: [400, 500, 600, 700], // specify the font weights you need
+      Roboto: [400, 500, 700]       // add Roboto with desired weights
+    },
+    display: 'swap'
+  },
+  // Other configurations
+  devServer: {
+    host: '0.0.0.0', // Bind to all network interfaces
+    port: 3000,      // Specify the port (default: 3000)
+  },
+})
