@@ -4,8 +4,8 @@
 
         <div id="equb" class="body-padding_margin">
             <div class="container">
-                <div class="duration-500 flex gap-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="duration-500 flex">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div class="">
                             <div class="saving-right-box">
                                 <!-- Section Header -->
@@ -250,7 +250,6 @@
 
 <script setup>
 import { ref } from 'vue';
-const login = ref(true);
 </script>
 
 <style>

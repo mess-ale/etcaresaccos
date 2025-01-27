@@ -2,10 +2,10 @@
   <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="bg-white shadow-md rounded-lg p-8 text-center">
       <!-- Success Icon -->
-      <div class="flex items-center justify-center w-20 h-20 mx-auto bg-green-100 rounded-full mb-6">
+      <!-- <div class="flex items-center justify-center w-20 h-20 mx-auto bg-bleu-100 rounded-full mb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-10 w-10 text-green-600"
+          class="h-10 w-10 text-blue-600"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -15,8 +15,10 @@
             clip-rule="evenodd"
           />
         </svg>
+      </div> -->
+      <div class="success-img">
+        <img src="../assets/PngItem_3416354.png" alt="success image" />
       </div>
-
       <!-- Success Message -->
       <h1 class="text-2xl font-bold text-primary mb-4">Submission Successful!</h1>
       <p class="text-primary mb-12">
@@ -24,10 +26,7 @@
       </p>
 
       <!-- Back Button -->
-      <nuxt-link
-        to="/"
-        class="etcare-button xxxs:p-2 md:p-4 xxxs:text-xs md:text-base"
-      >
+      <nuxt-link to="/" class="etcare-button p xxxs:px-4 xxxs:py-2 md:px-10 md:py-2 xxxs:text-xs md:text-base">
         Back to Home
       </nuxt-link>
     </div>
@@ -45,5 +44,15 @@ export default {
 </script>
 
 <style scoped>
-/* Add custom styles if needed */
+.success-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+img {
+  width: 5rem;
+  height: 5rem;
+}
 </style>

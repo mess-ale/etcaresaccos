@@ -1,6 +1,7 @@
 <template>
     <div>
         <ServiceCard text="service" imgservice="../_nuxt/assets/service/service.png" />
+        
         <div class="xxxs:py-6 md:py-10">
             <div class="body-padding_margin">
                 <div class="container">

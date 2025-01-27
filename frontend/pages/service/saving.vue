@@ -1,9 +1,9 @@
 <template>
-    <div v-if="login" class="text-primary pb-8">
+    <div class="text-primary pb-8">
         <ServiceCard text="Saving" imgservice="../_nuxt/assets/service/saving-page.png" />
         <div class="body-padding_margin ">
             <div class="container">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div class="">
                         <div class="saving-right-box">
                             <!-- Section Header -->
@@ -219,123 +219,7 @@
             </div>
         </div>
     </div>
-
-    <!-- <div v-else>
-        <ServiceCard text="Saving" imgservice="../_nuxt/assets/service/saving-page.png" />
-        <div class="savint-user bg-background min-h-screen">
-            <div class="">
-                <div class="flex gap-4 mb-6">
-                    <div class="bg-primary text-white p-6 rounded-md flex-1 container">
-                        <h1>***** **** 15682</h1>
-                        <p class="text-4xl font-bold font-oswald">12,000.0 birr</p>
-                        <div>
-                            <p class="text-sm font-light">account owner</p>
-                            <p class="text-lg font-oswald">Meseret Alemnew</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 flex-1">
-                        <div class="bg-white p-4 rounded-md flex-1 shadow-md container">
-                            <p class="font-bold font-oswald text-primary text-xl">Interest Earned</p>
-                            <p class="text-2xl text-secondary font-bold font-oswald">500.53 birr</p>
-                            <p class="text-xs text-primary">monthly interest rates</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-md flex-1 shadow-md container">
-                            <p class="text-xl font-bold text-primary font-oswald font-oswald">Account Type</p>
-                            <p class="text-2xl font-bold text-secondary">Fixed Saving</p>
-                            <p class="text-xs text-primary">Benefits</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-md flex-1 shadow-md flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-red-500 text-3xl mb-1">💸</div>
-                                <p class="text-sm text-primary font-oswald">Deposit Money</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center bg-blue-100 p-2 rounded-md mb-6">
-                    <p>you are 70% to reach your goals</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-md shadow-md mb-6">
-                    <p class="font-oswald text-primary font-bold mb-4">Last 30 days</p>
-                    <div class="h-40 w-full bg-background rounded-md flex items-end justify-around">
-                        <div class="w-8 bg-primary rounded-sm h-10"></div>
-                        <div class="w-8 bg-primary rounded-sm h-24"></div>
-                        <div class="w-8 bg-primary rounded-sm h-20"></div>
-                        <div class="w-8 bg-primary rounded-sm h-24"></div>
-                        <div class="w-8 bg-primary rounded-sm h-32"></div>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-md shadow-md">
-                    <div class="flex space-x-4 border-b">
-                        <button class="pb-2 border-b-2 border-primary text-primary">All Transactions</button>
-                        <button class="pb-2 text-primary">Saving Plan</button>
-                        <button class="pb-2 text-primary">Transaction History</button>
-                    </div>
-
-
-                    <div class="mt-4 text-primary">
-                        <p class="font-oswald text-2xl text-secondary mb-2">All Transactions</p>
-                        <p class="text-primary mb-4">All your transactions are recorded</p>
-
-                        <div class="flex items-center space-x-2 mb-4">
-                            <input type="text" placeholder="Search transactions..."
-                                class="p-2 border rounded-md flex-1" />
-                            <button class="p-2 bg-blue-600 text-white rounded-md">🔍</button>
-                            <button class="p-2 bg-gray-100 rounded-md">📅</button>
-                        </div>
-
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full bg-white">
-                                <thead>
-                                    <tr>
-                                        <th class="p-2 text-left">Sender</th>
-                                        <th class="p-2 text-left">Id Transaction</th>
-                                        <th class="p-2 text-left">Amount</th>
-                                        <th class="p-2 text-left">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr v-for="(transaction, index) in transactions" :key="index" class="border-t">
-                                        <td class="p-2">{{ transaction.sender }}</td>
-                                        <td class="p-2">{{ transaction.id }}</td>
-                                        <td class="p-2">{{ transaction.amount }}</td>
-                                        <td class="p-2">
-                                            <span
-                                                :class="transaction.status === 'success' ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800'"
-                                                class="px-2 py-1 rounded-md">
-                                                {{ transaction.status }}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </template>
-
-
-<script>
-export default {
-    data() {
-        return {
-            transactions: [
-                { sender: "ADDISALEM MEKURIA", id: "#138ufdjskjf32", amount: "5000 birr", status: "success" },
-                { sender: "ADDISALEM MEKURIA", id: "#138ufdjskjf32", amount: "5000 birr", status: "failed" },
-                { sender: "ADDISALEM MEKURIA", id: "#138ufdjskjf32", amount: "5000 birr", status: "success" },
-            ],
-            login: true
-        };
-    }
-};
-</script>
 
 <style>
 .container {

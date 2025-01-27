@@ -47,7 +47,6 @@
                                 <nuxt-link to="/about" class="links">ABOUT</nuxt-link>
                                 <nuxt-link to="/blog" class="links">BLOG</nuxt-link>
                                 <nuxt-link to="/contact" class="links">CONTACT</nuxt-link>
-                                <!-- <nuxt-link to="/MembershipForm" class="links">JOIN US</nuxt-link> -->
                             </div>
                         </div>
                     </div>
@@ -117,163 +116,14 @@
                             <li class="border-b-2">
                                 <nuxt-link to="/contact" @click="closeMenu">CONTACT</nuxt-link>
                             </li>
-                            <!-- <li>
-                        <nuxt-link to="/MembershipForm" @click="closeMenu">JOIN US</nuxt-link>
-                    </li> -->
                         </ul>
                     </div>
 
-                    <div v-if="login" class="w-1/4 flex space-x-4 justify-end">
+                    <div class="w-1/4 flex space-x-4 justify-end">
                         <nuxt-link to="/MembershipForm"
                             class="xxxs:text-xs md:text-sm xxl:text-base flex etcare-button xxxs:pt-1 xxxs:pb-1 xxxs:pl-2 xxxs:pr-2 md:pt-1 md:pb-1 md:pl-4 md:pr-4 xxl:pt-2 xxl:pb-2 xxl:pl-8 xxl:pr-8 space-x-10">
                             JOIN US
                         </nuxt-link>
-
-                        <!-- <nuxt-link to="/login"
-                    class="xxxs:text-xs md:text-sm xxl:text-base flex etcare-button xxxs:pt-1 xxxs:pb-1 xxxs:pl-2 xxxs:pr-2 md:pt-1 md:pb-1 md:pl-4 md:pr-4 xxl:pt-2 xxl:pb-2 xxl:pl-8 xxl:pr-8 space-x-10">
-                    SIGN IN
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M12 21v-2h7V5h-7V3h7q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm-2-4l-1.375-1.45l2.55-2.55H3v-2h8.175l-2.55-2.55L10 7l5 5z">
-                        </path>
-                    </svg>
-                </nuxt-link> -->
-                    </div>
-
-                    <div class="w-1/4" v-else>
-                        <div class="items-center flex space-x-2 user-profile hover:text-secondary"
-                            @click="toggleUserProfile">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M12 11q.825 0 1.413-.588Q14 9.825 14 9t-.587-1.413Q12.825 7 12 7q-.825 0-1.412.587Q10 8.175 10 9q0 .825.588 1.412Q11.175 11 12 11Zm0 2q-1.65 0-2.825-1.175Q8 10.65 8 9q0-1.65 1.175-2.825Q10.35 5 12 5q1.65 0 2.825 1.175Q16 7.35 16 9q0 1.65-1.175 2.825Q13.65 13 12 13Zm0 11q-2.475 0-4.662-.938q-2.188-.937-3.825-2.574Q1.875 18.85.938 16.663Q0 14.475 0 12t.938-4.663q.937-2.187 2.575-3.825Q5.15 1.875 7.338.938Q9.525 0 12 0t4.663.938q2.187.937 3.825 2.574q1.637 1.638 2.574 3.825Q24 9.525 24 12t-.938 4.663q-.937 2.187-2.574 3.825q-1.638 1.637-3.825 2.574Q14.475 24 12 24Zm0-2q1.8 0 3.375-.575T18.25 19.8q-.825-.925-2.425-1.612q-1.6-.688-3.825-.688t-3.825.688q-1.6.687-2.425 1.612q1.3 1.05 2.875 1.625T12 22Zm-7.7-3.6q1.2-1.3 3.225-2.1q2.025-.8 4.475-.8q2.45 0 4.463.8q2.012.8 3.212 2.1q1.1-1.325 1.713-2.95Q22 13.825 22 12q0-2.075-.788-3.887q-.787-1.813-2.15-3.175q-1.362-1.363-3.175-2.151Q14.075 2 12 2q-2.05 0-3.875.787q-1.825.788-3.187 2.151Q3.575 6.3 2.788 8.113Q2 9.925 2 12q0 1.825.6 3.463q.6 1.637 1.7 2.937Z">
-                                </path>
-                            </svg>
-                            <h1 class="font-bold text-lg font-oswald">Mess</h1>
-                        </div>
-
-                        <div v-show="userClick"
-                            class="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300">
-                            <div class="user-profile-drawer transform transition-transform duration-300">
-                                <div class="bg-background">
-                                    <img src="../assets/XXX.png" @click="toggleUserProfile"
-                                        class="cancle-img pt-8 pl-4 w-12 h-16" />
-                                    <div class="flex justify-center"> <img src="../assets/team/Hanan Pic 1.jpg"
-                                            class="home-image" alt="hanan" />
-                                    </div>
-                                    <h1 class="text-center font-bold text-3xl pb-4 font-oswald text-secondary">Hanan
-                                    </h1>
-                                </div>
-                                <div class="head-bio flex space-x-6 p-6">
-                                    <h1 class="font-bold font-oswald text-lg">bio:</h1>
-                                    <p class="text-justify font-robot text-md text-lg ">dventurous soul with a passion
-                                        for
-                                        exploring the
-                                        unknown.
-                                        Enthusiastic traveler, amateur photographer, and aspiring foodie.</p>
-                                </div>
-                                <div class="bg-primary text-white p-4">
-                                    <div class="flex items-center font-robot space-x-10 pl-4">
-                                        <h1 class="font-bold text-oswald text-lg">Name:</h1>
-                                        <h1>ADDISALEM MEKURIA</h1>
-                                    </div>
-                                    <div class="flex items-center font-robot space-x-8 pl-4">
-                                        <h1 class="font-bold text-oswald text-lg">Gender:</h1>
-                                        <h1>M</h1>
-                                    </div>
-                                    <div class="flex items-center font-robot space-x-4 pl-4">
-                                        <h1 class="font-bold text-oswald text-lg">Phone no:</h1>
-                                        <h1>911913002</h1>
-                                    </div>
-                                </div>
-
-                                <div class="flex justify-between p-6">
-                                    <div class="flex justify-center" @click="Editdialogmethod">
-                                        <div
-                                            class="etcare-button xs:pt-1 xs:pb-1 xs:pl-5 xs:pr-5 md:pt-2 md:pb-2 md:pl-8 md:pr-8 edit-button flex items-center space-x-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em"
-                                                viewBox="0 0 24 24">
-                                                <path fill="currentColor"
-                                                    d="M4 20v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13q.925 0 1.825.113t1.8.362l-1.675 1.7q-.5-.075-.975-.125T12 15q-1.4 0-2.775.338T6.5 16.35q-.225.125-.363.35T6 17.2v.8h6v2zm10 1v-3.075l5.525-5.5q.225-.225.5-.325t.55-.1q.3 0 .575.113t.5.337l.925.925q.2.225.313.5t.112.55t-.1.563t-.325.512l-5.5 5.5zm7.5-6.575l-.925-.925zm-6 5.075h.95l3.025-3.05l-.45-.475l-.475-.45l-3.05 3.025zm3.525-3.525l-.475-.45l.925.925zM12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m0-2q.825 0 1.413-.587T14 8t-.587-1.412T12 6t-1.412.588T10 8t.588 1.413T12 10m0-2">
-                                                </path>
-                                            </svg>
-
-                                            <h1>Edit</h1>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-center">
-                                        <div @click="logoutdialogmethod"
-                                            class="etcare-button xs:pt-1 xs:pb-1 xs:pl-5 xs:pr-5 md:pt-2 md:pb-2 md:pl-8 md:pr-8 footer-button flex items-center space-x-4 edit-button">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em"
-                                                viewBox="0 0 24 24">
-                                                <path
-                                                    d="M12 3c-4.963 0-9 4.037-9 9v.001l5-4v3h7v2H8v3l-5-4C3.001 16.964 7.037 21 12 21s9-4.037 9-9s-4.037-9-9-9z"
-                                                    fill="currentColor"></path>
-                                            </svg>
-                                            <h1>Log Out</h1>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div v-if="logoutdialog" class="dialog-overlay">
-                                <div class="dialog">
-                                    <h3>Confirm Logout</h3>
-                                    <p>Are you sure you want to log out?</p>
-                                    <div class="dialog-actions">
-                                        <button @click="confirmLogout" class="text-secondary">Yes, Logout</button>
-                                        <button @click="logoutdialogmethod">Cancel</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div v-if="profiledialog"
-                                class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                                <div class="text-primary bg-white rounded-lg shadow-md w-full max-w-md p-6">
-                                    <h2 class="text-2xl font-bold font-oswald text-primary mb-4">Edit Profile</h2>
-                                    <form @submit.prevent="updateProfile">
-                                        <div class="mb-4">
-                                            <label for="username"
-                                                class="block text-sm font-medium text-gray-700">Username</label>
-                                            <input v-model="form.username" type="text" id="username" required
-                                                class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" />
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="password"
-                                                class="block text-sm font-medium text-gray-700">Password</label>
-                                            <input v-model="form.password" type="password" id="password" required
-                                                class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" />
-                                        </div>
-                                        <div class="mb-4">
-                                            <label for="confirmPassword"
-                                                class="block text-sm font-medium text-gray-700">Confirm
-                                                Password</label>
-                                            <input v-model="form.confirmPassword" type="password" id="confirmPassword"
-                                                required
-                                                class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" />
-                                        </div>
-                                        <button type="submit"
-                                            class=" w-full bg-primary text-white py-2 rounded-md hover:bg-blue-600 transition duration-300">
-                                            <div class="flex items-center space-x-6 justify-center font-bold">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
-                                                    viewBox="0 0 24 24">
-                                                    <path fill="currentColor"
-                                                        d="M4 20v-2h2.75l-.4-.35q-1.225-1.225-1.787-2.662T4 12.05q0-2.775 1.663-4.937T10 4.25v2.1Q8.2 7 7.1 8.563T6 12.05q0 1.125.425 2.188T7.75 16.2l.25.25V14h2v6zm10-.25v-2.1q1.8-.65 2.9-2.212T18 11.95q0-1.125-.425-2.187T16.25 7.8L16 7.55V10h-2V4h6v2h-2.75l.4.35q1.225 1.225 1.788 2.663T20 11.95q0 2.775-1.662 4.938T14 19.75">
-                                                    </path>
-                                                </svg>
-                                                <h1> Update Profile
-                                                </h1>
-                                            </div>
-                                        </button>
-                                        <button type="button" @click="Editdialogmethod"
-                                            class="mt-4 w-full text-primary hover:text-secondary">
-                                            Cancel
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -362,14 +212,12 @@
 
                         <div class="space-y-3">
                             <h4 class="mb-4 font-bold font-oswald">LATEST NEWS</h4>
-                            <footerblogco imageSrc="../_nuxt/assets/dall1.png"
-                                description="Empowering Members Through Financial Education" date="21th Joly 2017" />
-                            <footerblogco imageSrc="../_nuxt/assets/dall2.png"
-                                description="Empowering Members Through Financial Education" date="21th Joly 2017" />
-                            <footerblogco imageSrc="../_nuxt/assets/dall3.png"
-                                description="Empowering Members Through Financial Education" date="21th Joly 2017" />
-                        </div>
 
+                            <footerblogco
+                             v-for="(blog, index) in blogPostsLetest" :key="index" :blog_id="blog.blog_id"
+                            :description="blog.title" :imageSrc="blog.blog_image" :content="blog.content" author="EtCare"
+                            :date="blog.event_date"/>
+                            </div>
                         <div>
                             <h5 class="text-justify mb-4 font-bold ">Contact your nearest Etcare SACCO branch to receive
                                 your
@@ -447,26 +295,29 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
-import { useAuthStore } from '../stores/auth';
-import { useRouter } from 'vue-router';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+const { $axios } = useNuxtApp();
 
 const headerBackgroundColor = ref('rgba(255, 255, 255, 0.55)');
-const login = ref(true);
-const userClick = ref(false);
-const logoutdialog = ref(false);
-const profiledialog = ref(false);
 const isMenuOpen = ref(false);
 const openMenuService = ref(false);
-const form = reactive({
-    username: '',
-    password: '',
-    confirmPassword: '',
-});
-const authStore = useAuthStore();
-const router = useRouter();
+const isLoading = ref(false);
+const blogPostsLetest = ref([]);
 
-const handleScroll = () => {
+const fetchBlogs = async () => {
+    isLoading.value = true;
+    try {
+        const response = await $axios.get(`/LatestBlogs/`);
+        blogPostsLetest.value = response.data;
+        console.log("letest blog posts", response.data)
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    } finally {
+        isLoading.value = false;
+    }
+};
+
+const handleScroll = async () => {
     if (window.scrollY > 100) {
         headerBackgroundColor.value = '#fff';
     } else {
@@ -491,58 +342,9 @@ const closeMenuservice = () => {
     isMenuOpen.value = false;
 }
 
-// User actions
-const toggleUserProfile = () => {
-    userClick.value = !userClick.value;
-};
-
-const confirmLogout = () => {
-    router.push('/login');
-};
-
-const logoutdialogmethod = () => {
-    logoutdialog.value = !logoutdialog.value;
-};
-
-const Editdialogmethod = () => {
-    profiledialog.value = !profiledialog.value;
-};
-
-const closeModal = () => {
-    // Emit a custom event if necessary
-    // Use `emit` function for emits in <script setup> if needed
-};
-
-const updateProfile = () => {
-    if (form.password !== form.confirmPassword) {
-        alert("Passwords do not match!");
-        return;
-    }
-    form.username = '';
-    form.password = '';
-    form.confirmPassword = '';
-    closeModal();
-};
-
-const user = ref({});
-const loading = ref(true);
-const { $axios } = useNuxtApp();
-const error = ref(null);
-// Lifecycle hooks
 onMounted(async () => {
-    // try {
-    //     const response = await $axios.get('/userlogin/');
-
-    //     user.value = response.data; // Set user data
-    //     console.log(user);
-    // } catch (err) {
-    //     error.value = err.response?.data?.detail || err.message; // Handle errors
-    // } finally {
-    //     loading.value = false; // End loading state
-    // }
     window.addEventListener('scroll', handleScroll);
-    const token = authStore.accessToken;
-    login.value = !token;
+    fetchBlogs();
 });
 
 onBeforeUnmount(() => {
@@ -565,13 +367,13 @@ onBeforeUnmount(() => {
 
 @media (min-width: 800px) {
     .body-padding_margin {
-        padding: 0 3.5rem;
+        padding: 0 2.5rem;
     }
 }
 
 @media (min-width: 1200px) {
     .body-padding_margin {
-        padding: 0 5rem;
+        padding: 0 3rem;
     }
 }
 
@@ -583,20 +385,6 @@ onBeforeUnmount(() => {
     /* Center the container */
     padding: 0 1rem;
     /* Add some padding for smaller screens */
-}
-
-
-.user-profile-drawer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30%;
-    min-height: 100vh;
-    background: theme('colors.primary');
-}
-
-.head-bio {
-    background: #FFDFDF;
 }
 
 .home-image {
@@ -626,12 +414,7 @@ onBeforeUnmount(() => {
     border-radius: 10px 10px 10px 0;
     border: none;
     cursor: pointer;
-}
-
-.edit-button {
-    background-color: theme('colors.background');
-    color: theme('colors.primary');
-    border-radius: 1px;
+    transition: color, background-color  0.15s ease-in-out;
 }
 
 .etcare-button:hover {
@@ -707,38 +490,5 @@ onBeforeUnmount(() => {
 
 .dropdown li:hover::before {
     width: 100%;
-}
-
-.user-profile {
-    cursor: pointer;
-}
-
-.dialog-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.dialog {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.dialog-actions {
-    margin-top: 20px;
-}
-
-.dialog-actions button {
-    margin: 0 10px;
 }
 </style>

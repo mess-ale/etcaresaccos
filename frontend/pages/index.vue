@@ -89,7 +89,7 @@
         <PhotoGallery />
 
 
-        <div class="xxxs:py-4 md:py-8">
+        <div class="xxxs:py-4 md:py-8 mb-32">
             <div class="body-padding_margin blog-letest">
                 <div class="container xxxs:space-y-4 md:space-y-6">
                     <div class="flex justify-center pt-20">
@@ -106,21 +106,9 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <blog-component title="My First Blog Post"
-                            summary="This is a blog post about my first experience with Nuxt.js."
-                            image="../_nuxt/assets/dall1.png"
-                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." author="John Doe"
-                            publishedAt="2023-11-22" />
-                        <blog-component title="My First Blog Post"
-                            summary="This is a blog post about my first experience with Nuxt.js."
-                            image="../_nuxt/assets/dall1.png"
-                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." author="John Doe"
-                            publishedAt="2023-11-22" />
-                        <blog-component title="My First Blog Post"
-                            summary="This is a blog post about my first experience with Nuxt.js."
-                            image="../_nuxt/assets/dall1.png"
-                            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." author="John Doe"
-                            publishedAt="2023-11-22" />
+                        <blog-component v-for="(blog, index) in blogPostsLetest" :key="index" :blog_id="blog.blog_id"
+                        :title="blog.title" :image="blog.blog_image" :content="blog.content" author="EtCare"
+                        :publishedAt="blog.event_date" />
                     </div>
                 </div>
             </div>
@@ -128,18 +116,28 @@
     </div>
 </template>
 
-<script>
-const refreshAccessToken = async () => {
+<script setup>
+const { $axios } = useNuxtApp();
+import { ref, onMounted } from 'vue';
+
+const blogPostsLetest = ref([]);
+const isLoading = ref(false);
+
+const fetchBlogs = async () => {
+    isLoading.value = true;
     try {
-        const response = await axios.post('http://127.0.0.1:8000/api/token/refresh/');
-        return response.data.access_token;
+        const response = await $axios.get(`/LatestBlogs/`);
+        blogPostsLetest.value = response.data;
     } catch (error) {
-        console.error('Failed to refresh access token:', error);
-        // Handle token renewal failure (e.g., log out the user)
+        console.error('Error fetching data:', error);
+    } finally {
+        isLoading.value = false;
     }
 };
 
-
+onMounted(() => {
+    fetchBlogs();
+});
 </script>
 
 <style>

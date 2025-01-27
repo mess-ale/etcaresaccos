@@ -58,46 +58,35 @@
                             placeholder="Phone Number" required />
                     </div>
 
-                    <!-- Saving Accounts -->
                     <fieldset class="mb-6">
                         <legend class="text-sm font-medium text-primary mb-2">Saving Accounts</legend>
-                        <div class="flex space-x-4">
-                            <label class="flex items-center">
-                                <input type="radio" value="Time deposit" v-model="form.savingAccount"
-                                    class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300" />
-                                <span class="ml-2 text-sm">Time deposit</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" value="Children Saving" v-model="form.savingAccount"
-                                    class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300" />
-                                <span class="ml-2 text-sm">Children Saving</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" value="Business Saving" v-model="form.savingAccount"
-                                    class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300" />
-                                <span class="ml-2 text-sm">Business Saving</span>
-                            </label>
+                        <div>
+                            <select v-model="form.savingAccount"
+                                class="focus:ring-green-500 focus:border-green-500 text-secondary cursor-pointer block w-full shadow-sm sm:text-sm border-gray-300 p-2 rounded-md">
+                                <option class="text-secondary" value="" disabled selected>Select a saving account</option>
+                                <option class="text-primary" value="Time deposit">Time deposit</option>
+                                <option class="text-primary" value="Children Saving">Children Saving</option>
+                                <option class="text-primary" value="Time limit saving">Time limit saving</option>
+                                <option class="text-primary" value="Interest free savings">Interest free savings</option>
+                                <option class="text-primary" value="Savings of women">Savings of women</option>
+                                <option class="text-primary" value="Business Saving">Business Saving</option>
+                            </select>
                         </div>
                     </fieldset>
 
                     <fieldset class="mb-6">
                         <legend class="text-sm font-medium text-primary mb-2">Loan Products</legend>
-                        <div class="flex space-x-4">
-                            <label class="flex items-center">
-                                <input type="radio" value="Business Loan" v-model="form.loanProduct"
-                                    class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300" />
-                                <span class="ml-2 text-sm">Business Loan</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" value="Vehicle Loan" v-model="form.loanProduct"
-                                    class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300" />
-                                <span class="ml-2 text-sm">Vehicle Loan</span>
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" value="Home Loan" v-model="form.loanProduct"
-                                    class="focus:ring-green-500 h-4 w-4 text-green-600 border-gray-300" />
-                                <span class="ml-2 text-sm">Home Loan</span>
-                            </label>
+                        <div>
+                            <select v-model="form.loanProduct"
+                                class="focus:ring-green-500 focus:border-green-500 cursor-pointer text-secondary block w-full shadow-sm sm:text-sm border-gray-300 p-2 rounded-md">
+                                <option class="text-secondary" value="" disabled selected>Select a loan product</option>
+                                <option class="text-primary" value="Business Loan">Business Loan</option>
+                                <option class="text-primary" value="Salary Loan">Salary Loan</option>
+                                <option class="text-primary" value="Special short-term loans">Special short-term loans</option>
+                                <option class="text-primary" value="Car Loan">Car Loan</option>
+                                <option class="text-primary" value="Vehicle Loan">Vehicle Loan</option>
+                                <option class="text-primary" value="Home Loan">Home Loan</option>
+                            </select>
                         </div>
                     </fieldset>
 
@@ -122,16 +111,47 @@
                 <h1 class="font-bold font-oswald text-secondary text-xl">Bank Accounts</h1>
                 <ul class="bg-white shadow-md rounded-lg md:w-3/4 max-w-lg">
                     <li class="border-b border-gray-200 p-4">
-                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia</span>
+                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Account 1</span>
+                        <span class="block font-semibold">1000628868739</span>
+                    </li>
+                    <li class="border-b border-gray-200 p-4">
+                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Interest Free Account
+                            2</span>
+                        <span class="block font-semibold">1000628867309</span>
+                    </li>
+                    <li class="border-b border-gray-200 p-4">
+                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Account 3</span>
+                        <span class="block font-semibold">1000628870927</span>
+                    </li>
+                    <li class="border-b border-gray-200 p-4">
+                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Equb Account 4</span>
+                        <span class="block font-semibold">1000628888586</span>
+                    </li>
+                    <li class="border-b border-gray-200 p-4">
+                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Equb Account 5</span>
                         <span class="block font-semibold">1000524668347</span>
                     </li>
                     <li class="border-b border-gray-200 p-4">
-                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia (Mudarebah Savings)</span>
-                        <span class="block font-semibold">10005439084</span>
+                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Interest Free Account
+                            6</span>
+                        <span class="block font-semibold">1000543908464</span>
                     </li>
                     <li class="p-4">
-                        <span class="font-medium text-gray-700">Dashen Bank (Savings Account)</span>
-                        <span class="block font-semibold">5264357499011</span>
+                        <span class="font-medium text-gray-700">Dashen Bank (Savings Account) Account 1</span>
+                        <span class="block font-semibold">5264357490011</span>
+                    </li>
+                    <li class="p-4">
+                        <span class="font-medium text-gray-700">Dashen Bank (Savings Account) Account 2</span>
+                        <span class="block font-semibold">0264357490011</span>
+                    </li>
+                    <li class="p-4">
+                        <span class="font-medium text-gray-700">Awash Bank (Savings Account) Interest Free Account
+                            1</span>
+                        <span class="block font-semibold">014371384732200</span>
+                    </li>
+                    <li class="p-4">
+                        <span class="font-medium text-gray-700">Awash Bank (Savings Account) Account 2</span>
+                        <span class="block font-semibold">013221384732200</span>
                     </li>
                 </ul>
             </div>
