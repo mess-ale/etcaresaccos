@@ -136,13 +136,90 @@
 import { ref, computed, onMounted } from 'vue';
 
 const teamMembers = ref([
-    { name: 'Hnana', role: 'Role 1' },
-    { name: 'Redu', role: 'Role 2' },
-    { name: 'Samri', role: 'Role 3' },
-    { name: 'Meseret', role: 'Role 4' },
-    { name: 'Kidest', role: 'Role 5' },
-    { name: 'Andualem', role: 'Role 6' },
-    // Add more team members as needed
+    { 
+        name: 'Kidist', 
+        role: 'CEO', 
+        image: 'assets/team/picKidistb.jpg', 
+        bio: 'Kidist leads with vision and a passion for innovation. She believes in empowering her team and creating a positive impact.' 
+    },
+    { 
+        name: 'Tigest', 
+        role: 'Manager', 
+        image: 'assets/team/PicTGb.jpg', 
+        bio: "Tigest keeps things running smoothly and efficiently. she's a skilled leader and problem-solver, always ready for a challenge."
+    },
+    { 
+        name: 'Luna', 
+        role: 'Loan Manager', 
+        image: 'assets/team/PicLuna.jpg', 
+        bio: "Luna helps clients achieve their financial goals. She's dedicated to providing excellent service and building strong relationships."
+    },
+    { 
+        name: 'Johnny', 
+        role: 'Driver', 
+        image: 'assets/team/PicJohnny1.jpg', 
+        bio: "Johnny ensures everyone gets where they need to go safely and on time. He's reliable and courteous, always with a smile."
+    },
+    { 
+        name: 'Hanan', 
+        role: 'Junior Accountant', 
+        image: 'assets/team/Hanan Pic 1.jpg', 
+        bio: 'Hanan is meticulous and detail-oriented, ensuring the accuracy of financial records. She\'s eager to learn and grow in her field.' 
+    },
+    { 
+        name: 'Ekram', 
+        role: 'Junior Accountant', 
+        image: 'assets/team/PicEkram.jpg', 
+        bio: "Ekram is a quick learner and a valuable member of the accounting team. she's passionate about numbers and problem-solving."
+    },
+    { 
+        name: 'Kidist', 
+        role: 'Cleaner', 
+        image: 'assets/team/PicKidistG.jpg', 
+        bio: 'Kidist keeps the workplace clean and organized, creating a pleasant environment for everyone. she takes pride in his work.' 
+    },
+    { 
+        name: 'Melat', 
+        role: 'Accountant', 
+        image: 'assets/team/PicMelat.jpg', 
+        bio: "Melat is a skilled accountant with a strong understanding of financial principles. she's dedicated to accuracy and efficiency."
+    },
+    { 
+        name: 'Redu', 
+        role: 'Casher', 
+        image: 'assets/team/PicRedu.jpg', 
+        bio: "Redu provides friendly and efficient service to customers. She's patient and helpful, always ready to assist."
+    },
+    { 
+        name: 'Samri', 
+        role: 'Loan Officer', 
+        image: 'assets/team/PicSamri.jpg', 
+        bio: "Samri helps clients navigate the loan process with ease. she's knowledgeable and supportive, ensuring a smooth experience."
+    },
+    { 
+        name: 'Selam', 
+        role: 'Loan Officer', 
+        image: 'assets/team/PicSelam.jpg', 
+        bio: 'Selam is dedicated to helping clients find the right loan solutions. She\'s a skilled communicator and problem-solver.' 
+    },
+    { 
+        name: 'Tigist', 
+        role: 'Accounting', 
+        image: 'assets/team/PicTG.png', 
+        bio: 'Tigist is a valuable member of the accounting team, contributing to accurate and efficient financial operations. She is always eager to learn.' 
+    },
+    { 
+        name: 'Andualem', 
+        role: 'IT Officer', 
+        image: 'assets/team/PicAndualem.jpg', 
+        bio: 'Andualem keeps the company\'s technology running smoothly. He\'s a skilled problem-solver and is passionate about all things tech.' 
+    },
+    { 
+        name: 'Meseret', 
+        role: 'IT Officer',  
+        image: 'assets/team/PicMeseret.jpg', 
+        bio: 'Meseret is a tech expert, ensuring the company\'s systems are secure and up-to-date. he\'s a valuable asset to the IT team.' 
+    },
 ]);
 
 const startIndex = ref(0);

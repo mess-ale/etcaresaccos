@@ -86,7 +86,7 @@
                         </div>
 
                         <div class="">
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Etcare Saccos Digital Ekub</h1>
                                 <li>Digital Ekub services offered by SACCOs (Savings and Credit Cooperative
                                     Organizations) are
@@ -100,7 +100,7 @@
                                 </li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Regular savings</h1>
                                 <li>A member must save a minimum regular savings amount of 750.00;</li>
                                 <li>Standard savings rate is based on the member's saving capacity and is based on the
@@ -114,7 +114,7 @@
                             </ul>
 
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Demand savings</h1>
                                 <li>The amount of demand savings will be determined according to the user's capacity and
                                     needs, accordingly
@@ -131,7 +131,7 @@
                                 </li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title"> Time limit saving</h1>
                                 <li>The minimum amount of time limit deposit will be 50 000.00/fifty thousand.</li>
                                 <li>The minimum deposit period is six months.</li>
@@ -172,7 +172,7 @@
                                 </li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Interest free savings</h1>
                                 <li>The cooperative is based on the member's desire and the agreement of the cooperative
                                     Savings that are not
@@ -191,7 +191,7 @@
                                     not caught.</li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
 
                                 <h1 class="saving-title">Children savings</h1>
                                 <li>The children of the members of the cooperative who are under 18 years of age
@@ -221,7 +221,7 @@
                                     they want You can open and save a math title where you can.</li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Savings of women</h1>
                                 <li>In order to encourage women to become entrepreneurs, it has become necessary to
                                     initiate a

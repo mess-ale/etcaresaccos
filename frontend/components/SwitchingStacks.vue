@@ -1,7 +1,13 @@
 <template>
   <div class="carousel relative w-full h-auto">
-    <img :src="images[currentImageIndex]" class="w-full h-auto object-cover 
-           transition-transform duration-500 ease-in-out" alt="home page image" />
+    
+    <img 
+      :src="images[currentImageIndex]" 
+      :key="currentImageIndex" 
+      :class="{'visible': isVisible}" 
+      class="w-full h-auto object-cover transition-all duration-1000 ease-in-out" 
+      alt="home page image" 
+    />
 
     <svg class="overlay-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
       <circle cx="-30" cy="10" r="50" fill="url(#grad1)" />
@@ -31,10 +37,10 @@
             </button>
 
             <div class="flex flex-col items-center">
-              <div class="homecontent space-y-8">
+              <div class="homecontent space-y-6">
                 <div>
                   <h1
-                    class="text-primary xxxs:text-lg xs:text-xl sm:text-3xl md:text-4xl xxl:text-5xl text-f font-oswald xxxs:py-8">
+                    class="text-primary xxxs:text-lg xs:text-xl sm:text-3xl md:text-4xl xxl:text-5xl text-f font-oswald xxxs:py-4 lg:py-8">
                     {{ title[currentImageIndex] }}</h1>
                 </div>
                 <div>
@@ -74,19 +80,20 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
+import { NuxtImg } from '#components';
+
 export default {
   data() {
     return {
       images: [
-        '../_nuxt/assets/home_page/02.jpg',
-        '../_nuxt/assets/home_page/06.jpg',
-        '../_nuxt/assets/home_page/05.jpg',
-        '../_nuxt/assets/home_page/06.jpg',
+        '../_nuxt/assets/homepage1.png',
+        '../_nuxt/assets/Untitled-3.png',
+        '../_nuxt/assets/Untitled-2.png',
+        '../_nuxt/assets/Untitled-1.png',
       ],
       title: [
         "Secure Your Financial Future with Our Trustworthy Saving Solutions – Building Wealth with Confidence.",
@@ -101,15 +108,22 @@ export default {
         "/service/loan",
       ],
       currentImageIndex: 0,
+      isVisible: true,
     };
   },
   methods: {
     nextImage() {
-      this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+      this.isVisible = false;
+      setTimeout(() => {
+        this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+        this.isVisible = true;
+      }, 1000); // Match this duration with your CSS transition duration
     },
     prevImage() {
-      this.currentImageIndex =
+      setTimeout(() => {
+        this.currentImageIndex =
         (this.currentImageIndex - 1 + this.images.length) % this.images.length;
+      }, 1000);
     },
   },
   mounted() {
@@ -122,6 +136,16 @@ export default {
 </script>
 
 <style scoped>
+
+img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+img.visible {
+  opacity: 1;
+}
+
 @media (min-width: 0) {
   .overlay-svg {
     display: none;
@@ -157,8 +181,8 @@ export default {
 
   .home-links {
     justify-content: space-between;
-    padding-top: 3.5rem;
-    padding-bottom: 4.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
     color: theme('colors.secondary');
     font-weight: bolder;
     font-size: theme('fontSize.xs');

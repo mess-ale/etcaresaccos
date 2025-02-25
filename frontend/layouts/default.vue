@@ -309,7 +309,6 @@ const fetchBlogs = async () => {
     try {
         const response = await $axios.get(`/LatestBlogs/`);
         blogPostsLetest.value = response.data;
-        console.log("letest blog posts", response.data)
     } catch (error) {
         console.error('Error fetching data:', error);
     } finally {

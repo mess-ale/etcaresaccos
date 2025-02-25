@@ -91,7 +91,7 @@
                         </div>
 
                         <div>
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Types of Eticare Loans,</h1>
                                 <li>Consumer loan</li>
                                 <li>Loans for education</li>
@@ -101,7 +101,7 @@
                                 <li>Travel loan to visit different places</li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Business loans.</h1>
                                 <li>Loans for urban agriculture;
                                     Small business loans;
@@ -125,7 +125,7 @@
 
                             <h1 class="saving-title">Loan amount and repayment period </h1>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Consumer loan</h1>
                                 <li>5/Five months/ and above 15% regular savings and 10% lottery Own member gets a
                                     consumer
@@ -141,7 +141,7 @@
                                 </li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title"> Business loan </h1>
                                 <li>5/Five months/ and above 20% normal savings and 10% lottery Your member can get a
                                     business
@@ -161,7 +161,7 @@
                                     months</li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Loans for home purchase, construction and renovation </h1>
                                 <li>20% normal savings of 6/six months/ and above in a row to borrow a home loan A
                                     member who
@@ -184,7 +184,7 @@
                                 </li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Car loan </h1>
                                 <li>20% regular savings of 6 months and more and 10% of lotteries A member gets a car
                                     loan with
@@ -198,7 +198,7 @@
                                     months.</li>
                             </ul>
 
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Special short-term loans </h1>
                                 <li>For four months and more, he has saved 25% regular savings and bought 5% lotteries
                                     and A
@@ -219,7 +219,7 @@
                                     to 6
                                     months. The loan repayment period will be twice a month every fifteen days</li>
                             </ul>
-                            <ul>
+                            <ul class="list-disc pl-5">
                                 <h1 class="saving-title">Salary loan </h1>
                                 <li>For member of government employees, bank employees, insurance employees and hospital
                                     employees

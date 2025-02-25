@@ -1,11 +1,12 @@
 <template>
     <div class="about-team">
-        <img src="../assets/team/Hanan Pic 1.jpg" class="team-image" alt="hanan" />
+        <img :src="`/_nuxt/${member.image}`" class="team-image" alt="hanan" />
         <div class="items-center flex text-primary text-center font-oswald team-text">
             <div class="text-primary">
                 <h1 class="font-oswald font-bold">{{ member.name }}</h1>
-                <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet
+                <h1 class="font-oswald font-bold text-secondary ">{{ member.role }}</h1>
+                <p class="text-sm">
+                    {{ member.bio }}
                 </p>
             </div>
         </div>
@@ -73,6 +74,10 @@ export default {
 
 .about-team {
     width: 15rem;
+}
+
+.about-team p {
+    padding: 0 1rem;
 }
 
 .about-link-div {
