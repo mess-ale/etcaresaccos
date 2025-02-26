@@ -36,7 +36,7 @@
                             <p class="text-primary font-robot text-justify xxxs:text-base md:text-lg">At Etcare SACCOs
                                 Ltd, we're known for
                                 our professionalism and dedication in finance. Our main
-                                goal is to become the best savings and credit cooperative society by 2020, helping our
+                                goal is to become the best savings and credit cooperative society by 2030, helping our
                                 members
                                 improve their lives. Using the latest technology, we offer a wide range of services like
                                 savings, loans, and banking that fit everyone's needs. We always stick to honesty,
@@ -64,7 +64,7 @@
                 <div class="container">
                     <div class="grid  grid-cols-1 md:grid-cols-2 xxxs:gap-4 md:gap-8 ">
                         <div class="space-y-4">
-                            <h1 class="text-secondary font-oswald font-bold  xxxs:text-3xl md:text-4xl pt-8">Our
+                            <h1 class="text-secondary font-oswald font-bold  xxxs:text-3xl md:text-4xl pt-8 xxxs:text-center md:text-left">Our
                                 Best Quality</h1>
                             <p class="text-primary font-robot text-justify xxxs:text-sm md:text-base">At Etcare SACCOs
                                 Ltd, we

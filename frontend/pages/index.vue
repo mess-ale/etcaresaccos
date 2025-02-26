@@ -45,10 +45,9 @@
                                 </div>
                             </div>
                             <h3 class="text-3xl font-bold">Vision</h3>
-                            <p>To be Ethiopia's leading SACCO, empowering members with innovative financial solutions
-                                and
-                                fostering
-                                community economic growth.</p>
+                            <p>By 2030, we envision our members achieving middle-level incomes and thriving as
+                                entrepreneurs. We're committed to their financial growth and entrepreneurial success.
+                            </p>
                         </div>
 
                         <div class="value-boje-section p-6 shadow-md space-y-4">
@@ -59,10 +58,10 @@
                                 </div>
                             </div>
                             <h3 class="text-3xl font-bold">Mission</h3>
-                            <p>We provide accessible, member-focused financial services, promoting savings, credit
-                                access,
-                                and
-                                financial literacy to enhance members' financial well-being.</p>
+                            <p>Improve socio-economic conditions of members and other stockholders through access to
+                                finance and asset building using the art of technology and highly competent and
+                                motivated staff in considerations of social governance aspects for maximizing
+                                stakeholders benefit.</p>
                         </div>
 
                         <div class="value-boje-section p-6 shadow-md space-y-4">
@@ -72,10 +71,10 @@
                                     <h1 class="cercle-nub-on font-bold text-2xl">3</h1>
                                 </div>
                             </div>
-                            <h3 class="text-3xl font-bold">Objectives</h3>
-                            <p>To support members' financial growth with tailored savings and loan products, while
-                                promoting
-                                financial education and sustainable practices for personal and community prosperity.</p>
+                            <h3 class="text-3xl font-bold">Value</h3>
+                            <p>Integrity, Reliability, Transparency, Accountability, Confidentiality, and Social
+                                Responsibility are the core values that guide our Board, management, and staff in all
+                                their actions and decisions.</p>
                         </div>
                     </div>
                 </div>
@@ -107,8 +106,8 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <blog-component v-for="(blog, index) in blogPostsLetest" :key="index" :blog_id="blog.blog_id"
-                        :title="blog.title" :image="blog.blog_image" :content="blog.content" author="EtCare"
-                        :publishedAt="blog.event_date" />
+                            :title="blog.title" :image="blog.blog_image" :content="blog.content" author="EtCare"
+                            :publishedAt="blog.event_date" />
                     </div>
                 </div>
             </div>

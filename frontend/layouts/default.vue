@@ -121,7 +121,8 @@
 
                     <div class="w-1/4 flex space-x-4 justify-end">
                         <nuxt-link to="/MembershipForm"
-                            class="xxxs:text-xs md:text-sm xxl:text-base flex etcare-button xxxs:pt-1 xxxs:pb-1 xxxs:pl-2 xxxs:pr-2 md:pt-1 md:pb-1 md:pl-4 md:pr-4 xxl:pt-2 xxl:pb-2 xxl:pl-8 xxl:pr-8 space-x-10">
+                            class="xxxs:text-xs md:text-sm xxl:text-base flex etcare-button xxxs:pt-1 
+                            xxxs:pb-1 xxxs:pl-2 xxxs:pr-2 md:pt-1 md:pb-1 md:pl-4 md:pr-4 xxl:pt-2 xxl:pb-2 xxl:pl-8 xxl:pr-8 space-x-10">
                             JOIN US
                         </nuxt-link>
                     </div>
@@ -146,7 +147,7 @@
                                     </path>
                                 </svg>
                                 <a href="https://maps.app.goo.gl/Bim8BvzZjeQAjKTU8" class="links" target="_blank">
-                                    <h4>Addis Ababa, Ethiopia</h4>
+                                    <h4>head office 22 mazoria ,Golagol</h4>
                                 </a>
                             </div>
 
@@ -166,7 +167,7 @@
                                     </g>
                                 </svg>
                                 <a href="mailto:Etcare@gmail.com" class="links">
-                                    <h4>Etcare@gmail.com</h4>
+                                    <h4>saccosetcare@gmail.com</h4>
                                 </a>
                             </div>
 
@@ -178,7 +179,7 @@
                                 </svg>
 
                                 <a href="tel:+251917550560" class="links">
-                                    <h4>+251-91-755-0560</h4>
+                                    <h4>+251-96-454-0000</h4>
                                 </a>
                             </div>
 
@@ -213,11 +214,10 @@
                         <div class="space-y-3">
                             <h4 class="mb-4 font-bold font-oswald">LATEST NEWS</h4>
 
-                            <footerblogco
-                             v-for="(blog, index) in blogPostsLetest" :key="index" :blog_id="blog.blog_id"
-                            :description="blog.title" :imageSrc="blog.blog_image" :content="blog.content" author="EtCare"
-                            :date="blog.event_date"/>
-                            </div>
+                            <footerblogco v-for="(blog, index) in blogPostsLetest" :key="index" :blog_id="blog.blog_id"
+                                :description="blog.title" :imageSrc="blog.blog_image" :content="blog.content"
+                                author="EtCare" :date="blog.event_date" />
+                        </div>
                         <div>
                             <h5 class="text-justify mb-4 font-bold ">Contact your nearest Etcare SACCO branch to receive
                                 your
@@ -413,12 +413,19 @@ onBeforeUnmount(() => {
     border-radius: 10px 10px 10px 0;
     border: none;
     cursor: pointer;
-    transition: color, background-color  0.15s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 
 .etcare-button:hover {
-    background-color: theme('colors.background');
-    color: theme('colors.secondary');
+    font-weight: bold;
+    transform: scale(1.05);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.etcare-button:not(:hover) {
+    /* color: inherit; */
+    transform: scale(1.0);
+    text-shadow: none;
 }
 
 .footer-button {

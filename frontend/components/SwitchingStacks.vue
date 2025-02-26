@@ -1,13 +1,8 @@
 <template>
   <div class="carousel relative w-full h-auto">
-    
-    <img 
-      :src="images[currentImageIndex]" 
-      :key="currentImageIndex" 
-      :class="{'visible': isVisible}" 
-      class="w-full h-auto object-cover transition-all duration-1000 ease-in-out" 
-      alt="home page image" 
-    />
+
+    <img :src="images[currentImageIndex]" :key="currentImageIndex" :class="{ 'visible': isVisible }"
+      class="w-full h-auto object-cover transition-all duration-1000 ease-in-out" alt="home page image" />
 
     <svg class="overlay-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
       <circle cx="-30" cy="10" r="50" fill="url(#grad1)" />
@@ -43,6 +38,7 @@
                     class="text-primary xxxs:text-lg xs:text-xl sm:text-3xl md:text-4xl xxl:text-5xl text-f font-oswald xxxs:py-4 lg:py-8">
                     {{ title[currentImageIndex] }}</h1>
                 </div>
+
                 <div>
                   <nuxt-link :to="link[currentImageIndex]"
                     class="xxxs:text-xs xs:text-sm sm:text-base md:text-lg xxl:text-xl etcare-button px-6 py-1 md:px-10 xxl:px-14 md:py-1 xxl:py-2 items-center font-oswald">
@@ -67,15 +63,15 @@
               to="/service/saving">Saving Service</nuxt-link>
             <nuxt-link class="link-home"
               :class="{ 'xxxs:border-t-2 md:border-t-4 border-primary': 1 === currentImageIndex }"
-              to="/service/training">Training Service</nuxt-link>
+              to="/service/loan">Loan
+              Service</nuxt-link>
             <nuxt-link class="link-home"
               :class="{ 'xxxs:border-t-2 md:border-t-4 border-primary': 2 === currentImageIndex }"
               to="/service/equb">Equb
               Service</nuxt-link>
             <nuxt-link class="link-home"
               :class="{ 'xxxs:border-t-2 md:border-t-4 border-primary': 3 === currentImageIndex }"
-              to="/service/loan">Loan
-              Service</nuxt-link>
+              to="/service/training">Training Service</nuxt-link>
           </div>
         </div>
       </div>
@@ -84,7 +80,7 @@
 </template>
 
 <script>
-import { NuxtImg } from '#components';
+// import Image from 'next/image';
 
 export default {
   data() {
@@ -97,15 +93,15 @@ export default {
       ],
       title: [
         "Secure Your Financial Future with Our Trustworthy Saving Solutions – Building Wealth with Confidence.",
-        "Empower Your Future with Skill-Building Training Programs Designed to Elevate Your Financial Independence.",
-        "Join a Community of Collective Savings with Equb – Build Wealth Together for a Brighter Future!",
         "Achieve Your Ambitions with Our Flexible Loan Options – Empowering You to Take the Next Step!",
+        "Join a Community of Collective Savings with Equb – Build Wealth Together for a Brighter Future!",
+        "Empower Your Future with Skill-Building Training Programs Designed to Elevate Your Financial Independence.",
       ],
       link: [
         "/service/saving",
-        "/service/training",
-        "/service/equb",
         "/service/loan",
+        "/service/equb",
+        "/service/training",
       ],
       currentImageIndex: 0,
       isVisible: true,
@@ -122,12 +118,12 @@ export default {
     prevImage() {
       setTimeout(() => {
         this.currentImageIndex =
-        (this.currentImageIndex - 1 + this.images.length) % this.images.length;
+          (this.currentImageIndex - 1 + this.images.length) % this.images.length;
       }, 1000);
     },
   },
   mounted() {
-    this.interval = setInterval(this.nextImage, 7000);
+    this.interval = setInterval(this.nextImage, 10000);
   },
   beforeDestroy() {
     clearInterval(this.interval);
@@ -136,7 +132,6 @@ export default {
 </script>
 
 <style scoped>
-
 img {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -163,6 +158,7 @@ img.visible {
     font-weight: bolder;
     font-size: theme('fontSize.xxs');
     width: 100%;
+    transition: all 0.35s ease-in-out;
   }
 
   .link-home:hover {
@@ -335,10 +331,12 @@ img.visible {
     font-weight: bolder;
     font-size: theme('fontSize.xl');
     width: 100%;
+    transition: all 0.35s ease-in-out;
   }
 
   .link-home:hover {
     border-top: solid 4px theme('colors.primary');
   }
+
 }
 </style>
