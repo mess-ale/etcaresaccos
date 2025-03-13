@@ -1,6 +1,6 @@
 <template>
     <div class="about-team">
-        <img :src="`/_nuxt/${member.image}`" class="team-image" alt="hanan" />
+        <img :src="`${member.image}`" class="team-image" alt="hanan" />
         <div class="items-center flex text-primary text-center font-oswald team-text">
             <div class="text-primary">
                 <h1 class="font-oswald font-bold">{{ member.name }}</h1>

@@ -20,6 +20,7 @@ export default {
         fontFamily: {
           oswald: ['Oswald', 'sans-serif'],
           roboto: ['Roboto', 'sans-serif'],
+          Madimi: ['Madimi One', 'sans-serif'],
         },
         fontSize: {
           'xxs': '0.6rem',

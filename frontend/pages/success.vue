@@ -17,7 +17,7 @@
         </svg>
       </div> -->
       <div class="success-img">
-        <img src="../assets/PngItem_3416354.png" alt="success image" />
+        <img src="/PngItem_3416354.png" alt="success image" />
       </div>
       <!-- Success Message -->
       <h1 class="text-2xl font-bold text-primary mb-4">Submission Successful!</h1>
@@ -34,13 +34,12 @@
 </template>
 
 <script>
-export default {
-  head() {
-    return {
-      title: "Success Page",
-    };
-  },
-};
+import { ref } from 'vue';
+
+useHead({
+  title: 'Success - Etcare SACCOs Ltd',
+});
+const title = "Success Page";
 </script>
 
 <style scoped>

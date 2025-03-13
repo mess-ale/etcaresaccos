@@ -1,13 +1,13 @@
 <template>
     <div class="web-body">
-        <header :style="{ backgroundColor: headerBackgroundColor }" class="fixed top-0 left-0 right-0 z-10 text-primary
+        <header :style="{ backgroundColor: headerBackgroundColor }" class="fixed z-in top-0 left-0 right-0 text-primary
             body-padding_margin">
             <div class="container">
                 <div class="flex items-center justify-between xs:h-20 md:h-24 xxl:h-32">
                     <div class="w-1/4">
                         <nuxt-link to="/"><img
                                 class="xxxs:w-24 xxxs:h-10 sm:w-32 sm:h-12 md:w-32 md:h-16 xxl:w-34 xxl:h-20"
-                                src="../assets/Etcare_logo1-removebg.png" alt="etcare logo" />
+                                src="/Etcare_logo1-removebg.png" alt="etcare logo" />
                         </nuxt-link>
                     </div>
 
@@ -140,6 +140,8 @@
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-10 pb-10">
 
                         <div class="space-y-3 ">
+                            <h4 class="mb-4 font-bold font-oswald">CONTACT US</h4>
+
                             <div class="items-center flex space-x-5">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
                                     <path fill="currentColor"
@@ -178,7 +180,7 @@
                                     </path>
                                 </svg>
 
-                                <a href="tel:+251917550560" class="links">
+                                <a href="tel:+251964540000" class="links">
                                     <h4>+251-96-454-0000</h4>
                                 </a>
                             </div>
@@ -219,9 +221,7 @@
                                 author="EtCare" :date="blog.event_date" />
                         </div>
                         <div>
-                            <h5 class="text-justify mb-4 font-bold ">Contact your nearest Etcare SACCO branch to receive
-                                your
-                                account username and password.</h5>
+                            <h5 class="mb-4 md:text-2xl lg:text-3xl text-center font-Madimi font-bold">EtCare SACCOs</h5>
                             <div class="flex justify-center pt-5">
                                 <nuxt-link to="/contact"
                                     class="etcare-button xs:pt-1 xxxs:pb-1 xxxs:pl-5 xxxs:pr-5 md:pt-2 md:pb-2 md:pl-8 md:pr-8 footer-button flex items-center space-x-4">
@@ -280,7 +280,7 @@
                         <div
                             class="grid grid-cols-1 md:grid-cols-2 gap-4 xxxs:py-4 justify-around w-full items-center text-primary md:py-6 xxl:py-8">
                             <div>
-                                <nuxt-link to="/"> <img src="../assets/Etcare_logo1-removebg.png" alt="etcare logo" />
+                                <nuxt-link to="/"> <img src="/Etcare_logo1-removebg.png" alt="etcare logo" />
                                 </nuxt-link>
                             </div>
                             <div>
@@ -376,7 +376,9 @@ onBeforeUnmount(() => {
     }
 }
 
-/* global.css */
+.z-in {
+    z-index: 100;
+}
 .container {
     max-width: 1240px;
     /* Adjust this value as per your design */
@@ -401,6 +403,10 @@ onBeforeUnmount(() => {
     padding: 0;
     margin: 0;
     background-color: theme('colors.background');
+}
+
+.links {
+    transition: all 0.2s ease-in-out;
 }
 
 .links:hover {

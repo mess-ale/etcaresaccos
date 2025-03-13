@@ -6,6 +6,7 @@
                     <img v-for="(photo, index) in photos" :key="index" :src="photo.url" alt="Photo" class="hover-photo"
                         @click="showPhoto(index)">
                 </div>
+                
                 <div v-if="selectedPhoto !== null" class="modal" @click="closeModal">
                     <img :src="photos[selectedPhoto].url" alt="Selected Photo" class="modal-img">
                 </div>
@@ -19,11 +20,11 @@ export default {
     data() {
         return {
             photos: [
-                { url: '../_nuxt/assets/01.png' },
-                { url: '../_nuxt/assets/03.png' },
-                { url: '../_nuxt/assets/06.png' },
-                { url: '../_nuxt/assets/07.png' },
-                { url: '../_nuxt/assets/08.png' },
+                { url: '/photo/gallary-1.jpg' },
+                { url: '/photo/gallary-2.jpg' },
+                { url: '/photo/gallary-3.jpg' },
+                { url: '/photo/gallary-4.jpg' },
+                { url: '/photo/gallary-5.jpg' },
             ],
             selectedPhoto: null
         };
@@ -43,7 +44,7 @@ export default {
 .hover-photo {
     cursor: pointer;
     width: 100%;
-    height: 100%;
+    height: 15rem;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease-in-out;

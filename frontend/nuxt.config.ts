@@ -17,4 +17,12 @@ export default defineNuxtConfig({
   image: {
     provider: 'ipx', // Default provider for local assets
   },
+  app: {
+    head: {
+      title: 'Etcare SACCOs Ltd',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/fevicon.ico' },
+      ],
+    },
+  },
 })

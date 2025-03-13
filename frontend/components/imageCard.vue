@@ -4,7 +4,7 @@
             <h1 class="text-secondary font-oswald font-bold text-5xl">{{ text }}</h1>
         </div>
     </div>
-    <img src="../assets/Group 40.png" class="pt-4 pb-12 image-class" alt="line header" />
+    <img src="/Group 40.png" class="pt-4 pb-12 image-class" alt="line header" />
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .cover {
-    background-image: url('../assets/2.jpg');
+    background-image: url('/assets/2.jpg');
     height: 23rem;
     display: flex;
     align-items: center;

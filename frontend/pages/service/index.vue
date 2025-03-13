@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ServiceCard text="service" imgservice="../_nuxt/assets/service/service.png" />
+        <ServiceCard text="service" imgservice="/service/service.png" />
         
         <div class="xxxs:py-6 md:py-10">
             <div class="body-padding_margin">
@@ -20,12 +20,12 @@
             </div>
         </div>
 
-        <div class="xxxs:py-6 md:py-12">
+        <div class="xxxs:py-6 md:py-12 mb-32">
             <div class="body-padding_margin">
                 <div class="container">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-0 service-body">
                         <div :class="{ 'onscreenleft': isVisibleleft1 }" class=" offscreenleft" ref="myElementleft1">
-                            <img src="../../assets/service/saving.png" alt="Description" class="service-image" />
+                            <img src="/service/saving.png" alt="Description" class="service-image" />
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright1 }" class="offscreenright" ref="myElementright1">
                             <div class="space-y-4 p-4">
@@ -87,10 +87,10 @@
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright2 }" class=" offscreenright"
                             ref="myElementright2">
-                            <img src="../../assets/service/training.png" class="service-image" alt="saving" />
+                            <img src="/service/training.jpg" class="service-image" alt="saving" />
                         </div>
                         <div :class="{ 'onscreenleft': isVisibleleft3 }" class=" offscreenleft" ref="myElementleft3">
-                            <img src="../../assets/service/equb.png" alt="saving" class="service-image" />
+                            <img src="/service/equb.png" alt="saving" class="service-image" />
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright3 }" class="offscreenright" ref="myElementright3">
                             <div class="space-y-4 p-4">
@@ -152,7 +152,7 @@
                         </div>
                         <div :class="{ 'onscreenright': isVisibleright4 }" class=" offscreenright"
                             ref="myElementright4">
-                            <img src="../../assets/service/loan.png" alt="saving" class="service-image" />
+                            <img src="/service/loan.png" alt="saving" class="service-image" />
                         </div>
                     </div>
                 </div>
@@ -160,73 +160,77 @@
         </div>
     </div>
 </template>
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-<script>
-export default {
-    data() {
-        return {
-            isVisibleleft1: false,
-            isVisibleright1: false,
-            isVisibleleft2: false,
-            isVisibleright2: false,
-            isVisibleleft3: false,
-            isVisibleright3: false,
-            isVisibleleft4: false,
-            isVisibleright4: false,
-        };
-    },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll);
-        this.handleScroll(); // Initial check
-    },
-    beforeDestroy() {
-        window.removeEventListener('scroll', this.handleScroll);
-    },
-    methods: {
-        handleScroll() {
-            const imageContainerleft1 = this.$refs.myElementleft1;
-            const imageContainerright1 = this.$refs.myElementright1;
-            const imageContainerleft2 = this.$refs.myElementleft2;
-            const imageContainerright2 = this.$refs.myElementright2;
-            const imageContainerleft3 = this.$refs.myElementleft3;
-            const imageContainerright3 = this.$refs.myElementright3;
-            const imageContainerleft4 = this.$refs.myElementleft4;
-            const imageContainerright4 = this.$refs.myElementright4;
-            const rectleft1 = imageContainerleft1.getBoundingClientRect();
-            const rectright1 = imageContainerright1.getBoundingClientRect();
-            const rectleft2 = imageContainerleft2.getBoundingClientRect();
-            const rectright2 = imageContainerright2.getBoundingClientRect();
-            const rectleft3 = imageContainerleft3.getBoundingClientRect();
-            const rectright3 = imageContainerright3.getBoundingClientRect();
-            const rectleft4 = imageContainerleft4.getBoundingClientRect();
-            const rectright4 = imageContainerright4.getBoundingClientRect();
-            this.isVisibleleft1 =
-                rectleft1.top >= 0 && rectleft1.top <= window.innerHeight - 100 ||
-                rectleft1.bottom >= 100 && rectleft1.bottom <= window.innerHeight;
-            this.isVisibleright1 =
-                rectright1.top >= 0 && rectright1.top <= window.innerHeight - 100 ||
-                rectright1.bottom >= 100 && rectright1.bottom <= window.innerHeight;
-            this.isVisibleleft2 =
-                rectleft2.top >= 0 && rectleft2.top <= window.innerHeight - 100 ||
-                rectleft2.bottom >= 100 && rectleft2.bottom <= window.innerHeight;
-            this.isVisibleright2 =
-                rectright2.top >= 0 && rectright2.top <= window.innerHeight - 100 ||
-                rectright2.bottom >= 100 && rectright2.bottom <= window.innerHeight;
-            this.isVisibleleft3 =
-                rectleft3.top >= 0 && rectleft3.top <= window.innerHeight - 100 ||
-                rectleft3.bottom >= 100 && rectleft3.bottom <= window.innerHeight;
-            this.isVisibleright3 =
-                rectright3.top >= 0 && rectright3.top <= window.innerHeight - 100 ||
-                rectright3.bottom >= 100 && rectright3.bottom <= window.innerHeight;
-            this.isVisibleleft4 =
-                rectleft4.top >= 0 && rectleft4.top <= window.innerHeight - 100 ||
-                rectleft4.bottom >= 100 && rectleft4.bottom <= window.innerHeight;
-            this.isVisibleright4 =
-                rectright4.top >= 0 && rectright4.top <= window.innerHeight - 100 ||
-                rectright4.bottom >= 100 && rectright4.bottom <= window.innerHeight;
-        }
-    }
+useHead({
+  title: 'Service - Etcare SACCOs Ltd',
+});
+
+const isVisibleleft1 = ref(false);
+const isVisibleright1 = ref(false);
+const isVisibleleft2 = ref(false);
+const isVisibleright2 = ref(false);
+const isVisibleleft3 = ref(false);
+const isVisibleright3 = ref(false);
+const isVisibleleft4 = ref(false);
+const isVisibleright4 = ref(false);
+
+const myElementleft1 = ref(null);
+const myElementright1 = ref(null);
+const myElementleft2 = ref(null);
+const myElementright2 = ref(null);
+const myElementleft3 = ref(null);
+const myElementright3 = ref(null);
+const myElementleft4 = ref(null);
+const myElementright4 = ref(null);
+
+const handleScroll = () => {
+  if (myElementleft1.value && myElementright1.value && myElementleft2.value && myElementright2.value && myElementleft3.value && myElementright3.value && myElementleft4.value && myElementright4.value ) {
+    const rectleft1 = myElementleft1.value.getBoundingClientRect();
+    const rectright1 = myElementright1.value.getBoundingClientRect();
+    const rectleft2 = myElementleft2.value.getBoundingClientRect();
+    const rectright2 = myElementright2.value.getBoundingClientRect();
+    const rectleft3 = myElementleft3.value.getBoundingClientRect();
+    const rectright3 = myElementright3.value.getBoundingClientRect();
+    const rectleft4 = myElementleft4.value.getBoundingClientRect();
+    const rectright4 = myElementright4.value.getBoundingClientRect();
+
+    isVisibleleft1.value =
+      rectleft1.top >= 0 && rectleft1.top <= window.innerHeight - 100 ||
+      rectleft1.bottom >= 100 && rectleft1.bottom <= window.innerHeight;
+    isVisibleright1.value =
+      rectright1.top >= 0 && rectright1.top <= window.innerHeight - 100 ||
+      rectright1.bottom >= 100 && rectright1.bottom <= window.innerHeight;
+    isVisibleleft2.value =
+      rectleft2.top >= 0 && rectleft2.top <= window.innerHeight - 100 ||
+      rectleft2.bottom >= 100 && rectleft2.bottom <= window.innerHeight;
+    isVisibleright2.value =
+      rectright2.top >= 0 && rectright2.top <= window.innerHeight - 100 ||
+      rectright2.bottom >= 100 && rectright2.bottom <= window.innerHeight;
+    isVisibleleft3.value =
+      rectleft3.top >= 0 && rectleft3.top <= window.innerHeight - 100 ||
+      rectleft3.bottom >= 100 && rectleft3.bottom <= window.innerHeight;
+    isVisibleright3.value =
+      rectright3.top >= 0 && rectright3.top <= window.innerHeight - 100 ||
+      rectright3.bottom >= 100 && rectright3.bottom <= window.innerHeight;
+    isVisibleleft4.value =
+      rectleft4.top >= 0 && rectleft4.top <= window.innerHeight - 100 ||
+      rectleft4.bottom >= 100 && rectleft4.bottom <= window.innerHeight;
+    isVisibleright4.value =
+      rectright4.top >= 0 && rectright4.top <= window.innerHeight - 100 ||
+      rectright4.bottom >= 100 && rectright4.bottom <= window.innerHeight;
+  }
 };
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Initial check
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style>
@@ -262,7 +266,7 @@ export default {
 }
 
 .cover-service-img {
-    background-image: url('../assets/2.jpg');
+    background-image: url('../2.jpg');
     height: 33rem;
     display: flex;
     align-items: center;

@@ -1,6 +1,6 @@
 <template>
     <div class="text-primary pb-8">
-        <ServiceCard text="Equb" imgservice="../_nuxt/assets/service/equb-p.png" />
+        <ServiceCard text="Equb" imgservice="/service/equb-p.png" />
 
         <div id="equb" class="body-padding_margin">
             <div class="container">
@@ -249,12 +249,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+useHead({
+  title: 'Equb - Etcare SACCOs Ltd',
+});
 </script>
 
 <style>
 .login-equb-body {
-    background-image: url('../../assets/car-equb.png');
+    background-image: url('/car-equb.png');
     padding: 2rem 4rem;
 }
 

@@ -1,6 +1,6 @@
 <template>
     <div class="text-primary pb-8">
-        <ServiceCard text="Saving" imgservice="../_nuxt/assets/service/saving-page.png" />
+        <ServiceCard text="Saving" imgservice="/service/saving-page.png" />
         <div class="body-padding_margin ">
             <div class="container">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -220,6 +220,12 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Saving - Etcare SACCOs Ltd',
+});
+</script>
 
 <style>
 .container {

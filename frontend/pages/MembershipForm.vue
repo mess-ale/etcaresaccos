@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ServiceCard text="Membership Form" imgservice="../_nuxt/assets/form.jpg" />
+        <ServiceCard text="Membership Form" imgservice="/form.jpg" />
 
         <div class="body-padding_margin">
             <div
@@ -124,16 +124,12 @@
                         <span class="block font-semibold">1000628870927</span>
                     </li>
                     <li class="border-b border-gray-200 p-4">
-                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Equb Account 4</span>
-                        <span class="block font-semibold">1000628888586</span>
-                    </li>
-                    <li class="border-b border-gray-200 p-4">
-                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Equb Account 5</span>
+                        <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Account 4</span>
                         <span class="block font-semibold">1000524668347</span>
                     </li>
                     <li class="border-b border-gray-200 p-4">
                         <span class="font-medium text-gray-700">Commercial Bank Of Ethiopia Interest Free Account
-                            6</span>
+                            5</span>
                         <span class="block font-semibold">1000543908464</span>
                     </li>
                     <li class="p-4">
@@ -170,7 +166,7 @@
                         <p>Capable of paying the following:</p>
                         <ul class="list-disc pl-6 mt-2">
                             <li>Registration fee: <span class="font-semibold">1,500 ETB</span></li>
-                            <li>Minimum initial savings: <span class="font-semibold">2,000 ETB</span></li>
+                            <li>Minimum initial share: <span class="font-semibold">2,000 ETB</span></li>
                             <li>Monthly savings contribution: <span class="font-semibold">750 ETB</span></li>
                         </ul>
                     </li>
@@ -249,6 +245,9 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
+useHead({
+  title: 'Membership Form - Etcare SACCOs Ltd',
+});
 // Define reactive form data as a single object
 const form = ref({
     firstName: '',

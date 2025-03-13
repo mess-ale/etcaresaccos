@@ -12,7 +12,9 @@
             </div>
         </div>
 
-        <div v-if="isLoading" class="text-primary text-center font-oswald text-6xl pt-12 pb-12">Loading...</div>
+        <div v-if="isLoading" class="text-primary text-center font-oswald text-6xl pt-12 pb-12">
+            <LoadingPage />
+        </div>
 
         <div v-else class="body-padding_margin mb-10">
             <div class="container">
@@ -49,6 +51,9 @@
 const { $axios } = useNuxtApp();
 import { ref, onMounted } from 'vue';
 
+useHead({
+  title: 'Blog - Etcare SACCOs Ltd',
+});
 const blogPosts = ref([]);
 const pagination = ref({
     next: null,

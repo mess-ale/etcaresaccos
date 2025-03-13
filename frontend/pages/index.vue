@@ -7,16 +7,15 @@
                 <div class="container xxxs:space-y-4 md:space-y-6">
                     <h1 class="text-center font-oswald xxxs:text-3xl xxl:text-4xl font-bold text-background">
                         Who we are</h1>
-                    <p class="text-center font-roboto xxxs:text-1xl sm:text-2xl">Etcare SACCO is a
-                        member-driven
-                        savings and credit cooperative dedicated to empowering individuals
-                        through financial inclusion. We provide innovative financial services, from savings and loans to
-                        investment opportunities, designed to meet the diverse needs of our members. Our commitment is
-                        rooted in fostering financial literacy, economic stability, and sustainable growth for all
-                        members
-                        of the
-                        cooperative. By prioritizing collaboration and leveraging modern technology, we aim to create a
-                        community where every member can achieve financial independence and security.</p>
+                    <p class="text-center font-roboto xxxs:text-1xl sm:text-2xl">
+                        EtCare SACCO is a member-owned financial cooperative dedicated to improving the financial
+                        well-being of our members. Established in 2022, we operate under Ethiopian Cooperative Society
+                        regulations, serving employees of EtCare PLC and Et-herbal manufacturing PLC. Our vision is to
+                        empower our members to achieve middle-level income and entrepreneurial success by 2030. Through
+                        strategic planning and a commitment to operational excellence, we provide diverse financial
+                        services, including savings and loan products, tailored to meet the unique needs of our
+                        community. We are guided by cooperative principles and a dedication to growing together.
+                    </p>
                     <div class="justify-center flex">
                         <nuxt-link
                             class="who-we-are-button items-center xxxs:text-lg md:text-lg xxl:text-xl font-oswald xxxs:space-x-2 md:space-x-4 flex font-roboto"
@@ -39,7 +38,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div class="value-boje-section p-6 shadow-md space-y-4">
                             <div class="flex items-bottoms">
-                                <img src="../assets/vision.png" class="h-16 w-16" alt="vision" />
+                                <img src="/vision.png" class="h-16 w-16" alt="vision" />
                                 <div class="cercle-nub">
                                     <h1 class="cercle-nub-on font-bold text-2xl">1</h1>
                                 </div>
@@ -52,7 +51,7 @@
 
                         <div class="value-boje-section p-6 shadow-md space-y-4">
                             <div class="flex items-bottoms">
-                                <img src="../assets/Mission.png" class="h-16 w-16" alt="vision" />
+                                <img src="/Mission.png" class="h-16 w-16" alt="vision" />
                                 <div class="cercle-nub">
                                     <h1 class="cercle-nub-on font-bold text-2xl">2</h1>
                                 </div>
@@ -66,7 +65,7 @@
 
                         <div class="value-boje-section p-6 shadow-md space-y-4">
                             <div class="flex items-bottoms">
-                                <img src="../assets/object.png" class="h-16 w-16" alt="vision" />
+                                <img src="/object.png" class="h-16 w-16" alt="vision" />
                                 <div class="cercle-nub">
                                     <h1 class="cercle-nub-on font-bold text-2xl">3</h1>
                                 </div>
@@ -92,7 +91,7 @@
             <div class="body-padding_margin blog-letest">
                 <div class="container xxxs:space-y-4 md:space-y-6">
                     <div class="flex justify-center pt-20">
-                        <img src="../assets/logo1-removebg.png" alt="logo" />
+                        <img src="/logo1-removebg.png" alt="logo" />
                     </div>
 
                     <h1 class="text-center text-primary font-oswald xxxs:text-sm md:text-xl">Directly Blog Posts</h1>
@@ -122,6 +121,10 @@ import { ref, onMounted } from 'vue';
 const blogPostsLetest = ref([]);
 const isLoading = ref(false);
 
+useHead({
+    title: 'Etcare SACCOs Ltd',
+});
+
 const fetchBlogs = async () => {
     isLoading.value = true;
     try {
@@ -145,7 +148,7 @@ onMounted(() => {
 }
 
 .blog-letest {
-    background-image: url('../assets/services-bg.png');
+    background-image: url('/services-bg.png');
     background-size: cover;
     background-position: center;
 }
@@ -271,6 +274,6 @@ onMounted(() => {
 }
 
 .photo-g {
-    background-image: url('../assets/photoG.png');
+    background-image: url('/photoG.png');
 }
 </style>

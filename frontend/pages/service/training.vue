@@ -1,6 +1,6 @@
 <template>
     <div class="text-primary pb-8">
-        <ServiceCard text="Training" imgservice="../_nuxt/assets/service/training.JPG" />
+        <ServiceCard text="Training" imgservice="/service/training.JPG" />
         <div class="body-padding_margin ">
             <div class="container">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -233,6 +233,13 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Training - Etcare SACCOs Ltd',
+});
+
+</script>
 
 <style>
 .saving-p-m {

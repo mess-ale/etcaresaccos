@@ -1,6 +1,6 @@
 <template>
     <div class="text-primary pb-8">
-        <ServiceCard text="Loan" imgservice="../_nuxt/assets/service/loan-p.png" />
+        <ServiceCard text="Loan" imgservice="/service/loan-p.png" />
         <div class="body-padding_margin">
             <div class="container">
                 <div class="duration-500 flex gap-4">
@@ -244,3 +244,9 @@
         </div>
     </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Loan - Etcare SACCOs Ltd',
+});
+</script>
